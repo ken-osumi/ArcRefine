@@ -1,0 +1,6 @@
+{
+  "figure": "Figure 2B; Figure S4B",
+  "parent_id": "83be67b8eba31a32",
+  "reference_sha256": "9de2d439d34ae2dbac0dc5551266935dd4d1adb8b3f4e6f1c0706a6bfca44169",
+  "note": "Targets use the standard Mosaic MSA service. JSON sequences are the optimizer inputs; archived scaffold residue names in reference.pdb can differ."
+}

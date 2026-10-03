@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying structural-carryover paper and the underlying model papers."
+title: "Structural carryover improves de novo binders while preserving binding modes"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Osumi
+    given-names: Ken
+    orcid: "https://orcid.org/0000-0002-3846-8747"
+    affiliation: "FoldArc Co., Ltd."
+license:
+  - "PolyForm-Noncommercial-1.0.0"
+  - MIT
+url: "https://foldarc.com/research/structural-carryover/"
+keywords:
+  - protein design
+  - structural carryover
+  - Boltz-2
+  - sequence optimization
+preferred-citation:
+  type: article
+  title: "Structural carryover improves de novo binders while preserving binding modes"
+  authors:
+    - family-names: Osumi
+      given-names: Ken
+      orcid: "https://orcid.org/0000-0002-3846-8747"
+  year: 2026
+  doi: "10.5281/zenodo.23115833"
+  publisher:
+    name: Zenodo
+repository-artifact: "https://foldarc.com/research/structural-carryover/assets/structural-carryover-code-v0.1.0.zip"
+repository-code: "https://github.com/ken-osumi/structural-carryover"

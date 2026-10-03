@@ -1,0 +1,37 @@
+{
+  "name": "tnfa_F3B_parent",
+  "parent_sequence": "GKLKELLKKLKELLKKIEEALAAKKYEEAKKYAKEALEILKEALKLFKEENLPEEALEAFEEKIEQLEYLLKQPANLATAIDLLRLLKSVLEQLEDIVKLLEAR",
+  "targets": [
+    {
+      "id": "A",
+      "sequence": "PVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL",
+      "template_pdb": "reference.pdb",
+      "template_chain": "A",
+      "use_msa": true
+    },
+    {
+      "id": "B",
+      "sequence": "PVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL",
+      "template_pdb": "reference.pdb",
+      "template_chain": "B",
+      "use_msa": true
+    },
+    {
+      "id": "C",
+      "sequence": "PVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL",
+      "template_pdb": "reference.pdb",
+      "template_chain": "C",
+      "use_msa": true
+    }
+  ],
+  "carryover": true,
+  "phase_steps": [
+    50,
+    50,
+    15
+  ],
+  "seed": 37,
+  "recycling_steps": 1,
+  "sampling_steps": 25,
+  "num_samples": 4
+}

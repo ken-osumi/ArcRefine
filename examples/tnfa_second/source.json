@@ -1,0 +1,16 @@
+{
+  "example_id": "F3B",
+  "figure": "Figure 3B",
+  "target": "tnfa",
+  "parent_id": "3673150eb5e543c1",
+  "parent_sequence": "GKLKELLKKLKELLKKIEEALAAKKYEEAKKYAKEALEILKEALKLFKEENLPEEALEAFEEKIEQLEYLLKQPANLATAIDLLRLLKSVLEQLEDIVKLLEAR",
+  "optimized_sequence": "SEVEELAERLEELARELREAAEAGDVERARELAREAAEAAREAARAAREAGVSEELVLLLEEYADLLEYNARTIETAEDAERAARVAEEAAEVARAAARDAEKL",
+  "sequence_identity": "0.2692307692307692",
+  "experimental_candidate_id": "TNFA_OPT_07",
+  "experimental_outcome": "true",
+  "reference_pdb": "reference_structures/F3B_reference.pdb",
+  "reference_binder_chain": "D",
+  "reference_target_chains": "A;B;C",
+  "parent_experimental_candidate_id": "",
+  "parent_experimental_outcome": "not tested"
+}

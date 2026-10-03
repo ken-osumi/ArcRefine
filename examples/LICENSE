@@ -1,0 +1,11 @@
+Scientific example data in this directory are licensed under the Creative
+Commons Attribution 4.0 International license (CC BY 4.0).
+Copyright 2026 FoldArc Co., Ltd., to the extent copyright applies.
+License text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The software license is stated separately in the repository root.
+
+The TNF-alpha target alignment includes UniRef100 sequence records from the
+UniProt Consortium, also under CC BY 4.0. See https://www.uniprot.org/uniref
+and https://www.uniprot.org/help/license . The included alignment is a capped
+version of the archived alignment; upstream sequence identifiers are preserved.

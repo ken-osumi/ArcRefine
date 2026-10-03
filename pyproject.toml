@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "foldarc-structural-carryover"
+version = "0.1.0"
+description = "Structural carryover for Boltz-2-guided protein sequence optimization"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+authors = [{name = "Ken Osumi", email = "ken@foldarc.com"}]
+license = "PolyForm-Noncommercial-1.0.0 AND MIT"
+license-files = ["LICENSE", "LICENSE_SCOPE.md", "THIRD_PARTY_NOTICES.md", "licenses/*.txt"]
+dependencies = [
+  "boltz @ git+https://github.com/escalante-bio/boltz.git@1acc397b6e81f30dc07a80d17a26c38f9c6f6942",
+  "equinox==0.13.8",
+  "gemmi==0.7.4",
+  "jax==0.11.0",
+  "jaxtyping==0.3.11",
+  "numpy==2.4.2",
+  "scipy==1.18.1",
+  "torch==2.10.0",
+  "einops>=0.8,<0.9",
+  "joltz @ git+https://github.com/nboyd/joltz.git@ed0f04257dac85bd4b7bf45521cc280f86d38ded",
+]
+
+[project.optional-dependencies]
+cuda12 = ["jax[cuda12]==0.11.0"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+structural-carryover = "structural_carryover.cli:main"
+structural-carryover-predict = "structural_carryover.predict:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/structural_carryover", "src/mosaic"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+artifacts = ["src/mosaic/proteinmpnn/weights/soluble_v_48_020.pt"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"licenses" = "structural_carryover/licenses"
+
+[tool.ruff]
+line-length = 100
+exclude = ["src/mosaic"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,17 @@
+{
+  "example_id": "F3A",
+  "figure": "Figure 3A",
+  "target": "pdl1",
+  "parent_id": "940176aff4ce5fed",
+  "parent_sequence": "SEAREAIIEAAVALANAINTAGDEEAKALTAEALEALRASFAKLAEGDKAGAEEEAKKAYELLEKAVELLKGSEETKELVKKAVKLLYEAVKAYLAGDKEKAKKLAEEAKKLAEEAEKKAKEEK",
+  "optimized_sequence": "MEVRDLLTEAAVLIANALYASGDPEVAELADEALVAFHEALRAIAEGDKEKALEAAERFLELALEAAELAPVSEEARELLKEAARLLAEALKAAAEGDEEKAKELAEEAIELAEEALELIEAER",
+  "sequence_identity": "0.4838709677419355",
+  "experimental_candidate_id": "",
+  "experimental_outcome": "not tested",
+  "reference_pdb": "reference_structures/F3A_reference.pdb",
+  "reference_binder_chain": "B",
+  "reference_target_chains": "A",
+  "parent_experimental_candidate_id": "",
+  "parent_experimental_outcome": "not tested",
+  "note": "Targets use the standard Mosaic MSA service. JSON sequences are the optimizer inputs; archived scaffold residue names in reference.pdb can differ."
+}

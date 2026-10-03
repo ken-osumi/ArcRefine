@@ -1,0 +1,60 @@
+--- a/src/mosaic/optimizers.py
++++ b/src/mosaic/optimizers.py
+@@ -367,6 +367,10 @@
+         best_x = jax.nn.softmax(best_x)
+ 
+     if trajectory_fn is None:
++        if update_loss_state:
++            return x, best_x, loss_function
+         return x, best_x
+     else:
++        if update_loss_state:
++            return x, best_x, trajectory, loss_function
+         return x, best_x, trajectory
+--- a/src/mosaic/losses/boltz2.py
++++ b/src/mosaic/losses/boltz2.py
+@@ -18,7 +18,7 @@
+ from joltz import TrunkState
+ 
+ 
+-from ..common import LinearCombination, LossTerm
++from ..common import LinearCombination, LossTerm, StateIndex
+ from ..util import pairwise_distance
+ from .structure_prediction import AbstractStructureOutput, predicted_tm_score
+ 
+@@ -410,7 +410,7 @@
+         return v, {self.name: aux}
+ 
+ 
+-class Boltz2FromTrunkOutput(eqx.Module):
++class Boltz2FromTrunkOutput(eqx.Module, AbstractStructureOutput):
+     joltz2: joltz.Joltz2
+     features: PyTree
+     deterministic: bool
+@@ -531,11 +531,16 @@
+     name: str = "boltz2multi"
+     initial_recycling_state: TrunkState | None = None
+     reduction: any = jnp.mean
++    state_index: StateIndex | None = None
+     """
+         Run the structure and confidence modules multiple times from the same trunk output.
+         When `reduction` is jnp.mean this is equivalent to the expected loss over multiple samples *assuming a deterministic trunk*, but faster.
+         This will consume quite a bit of memory -- if you'd like to sacrifice some speed for memory, replace the vmap below with a jax.lax.map.
+     """
++
++    def update_state(self, trunk_state):
++        """Carry the latest single/pair state to the next sequence update."""
++        return eqx.tree_at(lambda m: m.initial_recycling_state, self, trunk_state)
+ 
+     def __call__(self, sequence: Float[Array, "N 20"], key=None):
+         """Compute the loss for a given sequence."""
+@@ -578,4 +583,8 @@
+             jax.random.split(key, self.num_samples)
+         )
+         sortperm = jnp.argsort(vs)
+-        return self.reduction(vs), jax.tree.map(lambda v: list(v[sortperm]), auxs)
++        loss_aux = jax.tree.map(lambda v: list(v[sortperm]), auxs)
++        if self.state_index is not None:
++            trunk_update = (self.state_index, jax.lax.stop_gradient(output.trunk_state))
++            return self.reduction(vs), (loss_aux, trunk_update)
++        return self.reduction(vs), loss_aux
