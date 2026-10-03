@@ -109,7 +109,7 @@ installation check. The launcher has a 40-minute timeout.
 FoldArc's code and modifications: **[PolyForm Noncommercial 1.0.0](LICENSE)**.
 Noncommercial use is permitted under its terms; commercial use requires
 permission from **ken@foldarc.com**. Permitted uses are covered by the
-license’s [patent grant](LICENSE#patent-license), subject to its terms.
+license’s [patent grant](LICENSE#L51), subject to its terms.
 Third-party components retain their original licenses; see
 [license scope](LICENSE_SCOPE.md) and
 [attribution](THIRD_PARTY_NOTICES.md). Citation metadata is in `CITATION.cff`.
