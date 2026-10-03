@@ -9,7 +9,14 @@ app = modal.App("structural-carryover")
 image = (
     modal.Image.debian_slim(python_version="3.12")
     .apt_install("git", "libgomp1")
-    .pip_install_from_requirements(str(CODE / "requirements-linux-cuda12.lock"))
+    .pip_install("uv")
+    .add_local_file(str(CODE / "requirements-linux-cuda12.lock"),
+                    "/tmp/requirements-linux-cuda12.lock", copy=True)
+    .run_commands(
+        "uv venv --python 3.12 /opt/venv",
+        "uv pip sync --python /opt/venv/bin/python /tmp/requirements-linux-cuda12.lock",
+    )
+    .env({"PATH": "/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin"})
     .run_commands(
         'python -c "from pathlib import Path; from boltz.main import download_boltz2; '
         "p=Path('/root/.boltz'); p.mkdir(exist_ok=True); download_boltz2(p)\""
@@ -30,7 +37,7 @@ image = (
             ".git/**",
         ],
     )
-    .run_commands("cd /opt/carryover && uv pip install --system --no-deps .")
+    .run_commands("cd /opt/carryover && uv pip install --python /opt/venv/bin/python --no-deps .")
     .env(
         {
             "XLA_PYTHON_CLIENT_PREALLOCATE": "true",

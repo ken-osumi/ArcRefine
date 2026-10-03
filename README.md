@@ -1,22 +1,26 @@
 # Structural carryover
 
-Optimize a protein binder with [Mosaic](https://github.com/escalante-bio/mosaic),
-carrying Boltz-2's single and pair representations between sequence updates.
-Predict the resulting sequence independently with Boltz-2.
+Optimize a protein binder while carrying Boltz-2's single and pair
+representations between sequence updates, then predict the resulting sequence
+independently with Boltz-2.
 
 Accompanies [Structural carryover improves de novo binders while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
 
+Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
+carryover added to its optimization loop.
+
 ## Install
 
-Use Python 3.12 on Linux with an NVIDIA CUDA GPU, Git and `libgomp1`.
+Use Linux with an NVIDIA CUDA GPU, Git, `libgomp1` and
+[uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ```sh
 git clone https://github.com/ken-osumi/structural-carryover.git
 cd structural-carryover
-python3.12 -m venv .venv
+uv venv --python 3.12
 . .venv/bin/activate
-python -m pip install -r requirements-linux-cuda12.lock
-python -m pip install --no-deps .
+uv pip sync requirements-linux-cuda12.lock
+uv pip install --no-deps .
 ```
 
 Boltz-2 parameters download on first use. Soluble ProteinMPNN weights are included.
