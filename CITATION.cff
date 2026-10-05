@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying structural-carryover paper and the underlying model papers."
-title: "Structural carryover improves de novo binders while preserving binding modes"
+message: "Please cite the accompanying BindRelay paper and the underlying model papers."
+title: "BindRelay refines de novo binder designs while preserving binding modes"
 type: software
 version: 0.1.0
 authors:
@@ -13,19 +13,21 @@ license:
   - MIT
 url: "https://foldarc.com/research/structural-carryover/"
 keywords:
+  - BindRelay
   - protein design
   - structural carryover
   - Boltz-2
   - sequence optimization
 preferred-citation:
   type: article
-  title: "Structural carryover improves de novo binders while preserving binding modes"
+  title: "BindRelay refines de novo binder designs while preserving binding modes"
   authors:
     - family-names: Osumi
       given-names: Ken
       orcid: "https://orcid.org/0000-0002-3846-8747"
   year: 2026
-  doi: "10.5281/zenodo.23115833"
+  date-published: 2026-10-05
+  doi: "10.5281/zenodo.23150767"
   publisher:
     name: Zenodo
 repository-artifact: "https://foldarc.com/research/structural-carryover/assets/structural-carryover-code-v0.1.0.zip"

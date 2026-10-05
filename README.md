@@ -1,13 +1,18 @@
-# Structural carryover
+# BindRelay
 
-Optimize a protein binder while carrying Boltz-2's single and pair
-representations between sequence updates, then predict the resulting sequence
-independently with Boltz-2.
+Refine an existing protein binder design while preserving its fold and binding
+mode. BindRelay uses structural carryover: Boltz-2's single and pair
+representations pass between sequence updates. The resulting sequence is then
+predicted independently with Boltz-2.
 
-Accompanies [Structural carryover improves de novo binders while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
+Accompanies [BindRelay refines de novo binder designs while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
+
+[Manuscript V17 · Zenodo version 2.0](https://doi.org/10.5281/zenodo.23150767) ·
+[Research overview](https://foldarc.com/research/structural-carryover/)
 
 Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
-carryover added to its optimization loop.
+carryover added to its optimization loop. The repository URL and
+`structural-carryover` command names are retained for compatibility.
 
 ## Install
 
