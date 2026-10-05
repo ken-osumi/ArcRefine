@@ -7,7 +7,7 @@ predicted independently with Boltz-2.
 
 Accompanies [ArcRefine improves de novo binder designs while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
 
-[Manuscript V19 · Zenodo version 2.3](https://doi.org/10.5281/zenodo.23156179) ·
+[Manuscript on Zenodo](https://doi.org/10.5281/zenodo.23115832) ·
 [Research overview](https://foldarc.com/research/structural-carryover/)
 
 Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
