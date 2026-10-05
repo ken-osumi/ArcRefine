@@ -1,13 +1,13 @@
-# BindRelay
+# ArcRefine
 
 Refine an existing protein binder design while preserving its fold and binding
-mode. BindRelay uses structural carryover: Boltz-2's single and pair
+mode. ArcRefine uses structural carryover: Boltz-2's single and pair
 representations pass between sequence updates. The resulting sequence is then
 predicted independently with Boltz-2.
 
-Accompanies [BindRelay refines de novo binder designs while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
+Accompanies [ArcRefine improves de novo binder designs while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
 
-[Manuscript V18 · Zenodo version 2.2](https://doi.org/10.5281/zenodo.23153943) ·
+[Manuscript V19 · Zenodo version 2.3](https://doi.org/10.5281/zenodo.23156179) ·
 [Research overview](https://foldarc.com/research/structural-carryover/)
 
 Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
@@ -20,8 +20,8 @@ Use Linux with an NVIDIA CUDA GPU, Git, `libgomp1` and
 [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ```sh
-git clone https://github.com/ken-osumi/BindRelay.git
-cd BindRelay
+git clone https://github.com/ken-osumi/ArcRefine.git
+cd ArcRefine
 uv venv --python 3.12
 . .venv/bin/activate
 uv pip sync requirements-linux-cuda12.lock

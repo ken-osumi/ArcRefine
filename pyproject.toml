@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "foldarc-structural-carryover"
 version = "0.1.0"
-description = "BindRelay: binder refinement through structural carryover with Boltz-2"
+description = "ArcRefine: binder refinement through structural carryover with Boltz-2"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 authors = [{name = "Ken Osumi", email = "ken@foldarc.com"}]

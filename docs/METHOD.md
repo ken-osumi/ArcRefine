@@ -1,6 +1,6 @@
-# BindRelay method
+# ArcRefine method
 
-BindRelay refines an existing binder design using structural carryover.
+ArcRefine improves an existing binder design using structural carryover.
 The optimizer combines Mosaic's differentiable Boltz-2 and soluble ProteinMPNN
 objectives with transfer of single and pair representations between sequence updates.
 
