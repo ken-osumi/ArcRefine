@@ -7,7 +7,7 @@ predicted independently with Boltz-2.
 
 Accompanies [BindRelay refines de novo binder designs while preserving binding modes](https://foldarc.com/research/structural-carryover/paper/).
 
-[Manuscript V17 · Zenodo version 2.1](https://doi.org/10.5281/zenodo.23150950) ·
+[Manuscript V18 · Zenodo version 2.2](https://doi.org/10.5281/zenodo.23153943) ·
 [Research overview](https://foldarc.com/research/structural-carryover/)
 
 Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
