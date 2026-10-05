@@ -11,8 +11,8 @@ Accompanies [BindRelay refines de novo binder designs while preserving binding m
 [Research overview](https://foldarc.com/research/structural-carryover/)
 
 Built on [Mosaic](https://github.com/escalante-bio/mosaic), with structural
-carryover added to its optimization loop. The repository URL and
-`structural-carryover` command names are retained for compatibility.
+carryover added to its optimization loop. The `structural-carryover` command
+names are retained for compatibility.
 
 ## Install
 
@@ -20,8 +20,8 @@ Use Linux with an NVIDIA CUDA GPU, Git, `libgomp1` and
 [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ```sh
-git clone https://github.com/ken-osumi/structural-carryover.git
-cd structural-carryover
+git clone https://github.com/ken-osumi/BindRelay.git
+cd BindRelay
 uv venv --python 3.12
 . .venv/bin/activate
 uv pip sync requirements-linux-cuda12.lock

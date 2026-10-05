@@ -31,4 +31,4 @@ preferred-citation:
   publisher:
     name: Zenodo
 repository-artifact: "https://foldarc.com/research/structural-carryover/assets/structural-carryover-code-v0.1.0.zip"
-repository-code: "https://github.com/ken-osumi/structural-carryover"
+repository-code: "https://github.com/ken-osumi/BindRelay"
